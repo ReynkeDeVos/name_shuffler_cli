@@ -5,7 +5,7 @@ A modern CLI tool that shuffles names into random groups of specified size.
 ## Demo
 
 <div align="center">
-  <img src="assets/demo.mp4" alt="Demo of Name Shuffler" style="width:auto; height:500px;">
+  <img src="./assets/demo.mp4" alt="Demo of Name Shuffler" style="width:auto; height:500px;">
 </div>
 
 ## Installation

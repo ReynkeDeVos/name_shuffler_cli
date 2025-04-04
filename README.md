@@ -1,6 +1,6 @@
 # Name Shuffler
 
-A modern CLI tool that shuffles names into random groups of specified size.
+A modern CLI tool that shuffles names randomly into groups.
 
 ## Demo
 

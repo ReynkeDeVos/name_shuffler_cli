@@ -1,0 +1,21 @@
+{
+  "name": "name_shuffler",
+  "version": "1.0.2",
+  "description": "CLI tool to shuffle names into groups",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "name-shuffler": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.12",
+    "ora": "^7.0.1",
+    "boxen": "^7.1.1",
+    "gradient-string": "^2.0.2",
+    "figlet": "^1.7.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+} 

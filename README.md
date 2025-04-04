@@ -2,12 +2,9 @@
 
 A modern CLI tool that shuffles names into random groups of specified size.
 
-## Features
+## Demo
 
-- Interactive prompts for entering names and group size
-- Beautiful terminal UI with colors and animations
-- Intelligent group balancing algorithm
-- Easy to use
+![Demo of Name Shuffler](demo.mp4)
 
 ## Installation
 
@@ -62,4 +59,4 @@ This will create balanced groups with the names shuffled randomly.
 ## Requirements
 
 - Node.js (v14.8.0 or higher)
-- npm (v6.14.0 or higher
+- pnpm (v7.0.0 or higher)

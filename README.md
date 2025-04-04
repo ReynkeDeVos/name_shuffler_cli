@@ -52,8 +52,6 @@ Group 2: Bob, Eve
 Group 3: Charlie, Dave, Grace
 ```
 
-This will create 3 groups with the names shuffled randomly and distributed as evenly as possible.
-
 ## Requirements
 
 * Node.js (v14.8.0 or higher)

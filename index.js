@@ -66,9 +66,9 @@ function displayGroups(groups) {
     )
   );
 
-  // Sstyling elements
+  // Styling elements
   const colors = ["green", "magenta", "blue", "red", "cyan", "yellow"];
-  const boxWidth = Math.max(12, Math.min(15, Math.floor(termWidth / 5) - 2));
+  const boxWidth = Math.max(10, Math.min(14, Math.floor(termWidth / 6) - 2));
 
   let maxHeight = 0;
   let maxWidth = 0;
@@ -110,14 +110,24 @@ function displayGroups(groups) {
   });
 
   // Calculate layout for responsive display
-  const effectiveWidth = Math.max(boxWidth, maxWidth + 4);
-  const padding = 4;
-  const groupsPerRow = Math.max(
-    1,
-    Math.floor((termWidth + padding) / (effectiveWidth + padding))
-  );
+  const boxes = boxedGroups.map((box) => box.split("\n")[0].length);
+  const maxBoxWidth = Math.max(...boxes);
 
-  // Render groups in rows based on terminal width
+  // Determine how many boxes will fit in the terminal width
+  const spaceBetweenBoxes = 3;
+  const availableWidth = termWidth;
+  let groupsPerRow = 1;
+  let testWidth = maxBoxWidth;
+
+  while (
+    testWidth + spaceBetweenBoxes + maxBoxWidth <= availableWidth &&
+    groupsPerRow < groups.length
+  ) {
+    groupsPerRow++;
+    testWidth += spaceBetweenBoxes + maxBoxWidth;
+  }
+
+  // Render groups in rows
   for (let i = 0; i < groups.length; i += groupsPerRow) {
     const rowGroups = boxedGroups.slice(i, i + groupsPerRow);
     const groupLines = rowGroups.map((box) => box.split("\n"));
@@ -128,7 +138,7 @@ function displayGroups(groups) {
       let rowOutput = "";
       for (const lines of groupLines) {
         const line = j < lines.length ? lines[j] : "";
-        rowOutput += line.padEnd(effectiveWidth + padding, " ");
+        rowOutput += line + " ".repeat(spaceBetweenBoxes);
       }
       console.log(rowOutput);
     }

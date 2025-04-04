@@ -41,17 +41,6 @@ Then follow the prompts:
 2. Specify the number of groups you want
 3. See the randomly generated groups!
 
-## Example
-
-```
-Enter names (separated by commas): Alice, Bob, Charlie, Dave, Eve, Frank, Grace, Heidi
-Enter number of groups: 3
-
-Group 1: Alice, Frank, Heidi
-Group 2: Bob, Eve
-Group 3: Charlie, Dave, Grace
-```
-
 ## Requirements
 
 * Node.js (v14.8.0 or higher)

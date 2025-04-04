@@ -4,7 +4,7 @@ A modern CLI tool that shuffles names into random groups of specified size.
 
 ## Demo
 
-[Watch a demo video](./assets/demo.avif)
+![Watch a demo video](./assets/demo.avif)
 
 ## Installation
 
